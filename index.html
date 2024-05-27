@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        nav header {
+            font-size: 2rem;
+            color: white;
+        }
+
+        nav {
+            display: flex;
+            padding: 2% 4%;
+        }
+
+        nav a {
+            margin-top: 20px;
+            transform: translate(550px);
+            margin-left: 40px;
+            font-size: 1.2rem;
+            color: white;
+            text-decoration: none;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        nav a:hover {
+            color: hsla(318, 82%, 40%, 0.678);
+        }
+
+        /* home scetion */
+        #home {
+            height: 180vh;
+            background: linear-gradient(120deg, hsla(318, 82%, 40%, 0.678), rgb(55, 55, 197));
+        }
+
+        .container {
+            width: 97%;
+            padding: 20px;
+            margin: 20px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .heroitem {
+
+            width: 100%;
+            height: 400px;
+            overflow: hidden;
+        }
+
+        .heroitem:nth-child(1) {
+            height: 500px;
+        }
+
+        .heroitem:nth-child(1)>h1 {
+            color: white;
+            margin-left: 16px;
+            margin-top: 80px;
+            font-size: 3rem;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .heroitem:nth-child(1)>p {
+            color: white;
+            margin-top: 20px;
+            margin-left: 16px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .heroitem:nth-child(1)>button {
+            margin-top: 70px;
+            margin-left: 16px;
+            padding: 3% 12%;
+            border-radius: 10px;
+            outline: 0;
+            border: 0;
+        }
+        .heroitem>button:hover{
+            background-color: black;
+            color: white;
+        }
+
+        .heroitem:nth-child(2) {
+            height: 800px;
+            background-size: cover;
+        }
+
+        @media screen and (max-width:650px) {
+            #home {
+                height: 220vh;
+                height: fit-content;
+            }
+
+            nav {
+                display: none;
+            }
+
+            .heroitem:nth-child(2) {
+                height: fit-content;
+                margin-left: -200px;
+            }
+
+            .container {
+                height: fit-content;
+                flex-direction: column;
+            }
+
+            .heroitem {
+                height: fit-content;
+            }
+        }
+
+
+        /* services section */
+        #service {
+            height: 80vh;
+        }
+
+        .container2 {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            width: 97%;
+            padding: 20px;
+            margin: 20px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .servicesection {
+            width: 100%;
+            height: 350px;
+            border: 1px solid black;
+            border-radius: 10px;
+        }
+
+        .servicesection:hover {
+            background-color: rgb(230, 232, 235);
+            color: white;
+        }
+
+        .fa-microphone,
+        .fa-microphone-lines,
+        .fa-headphones {
+            padding: 2% 4% 2% 4%;
+            font-size: 8rem;
+            margin-top: 20px;
+            margin-left: 120px;
+            border-radius: 100%;
+            color: black;
+            border: 3px solid black;
+        }
+
+        #service>h1 {
+            margin-top: 40px;
+            font-size: 2rem;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+        }
+
+        #service>p {
+            margin-top: 30px;
+            margin-left: 50px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: rgba(88, 86, 86, 0.596);
+        }
+
+        .servicesection>h3 {
+            font-size: 1.5rem;
+            margin-left: 130px;
+            margin-top: 40px;
+            color: black;
+        }
+
+        .servicesection>p {
+            color: black;
+            min-width: 80px;
+            margin-top: 20px;
+            margin-left: 20px;
+        }
+
+        @media screen and (max-width:650px) {
+            #service {
+                height: fit-content;
+            }
+
+            .container2 {
+                flex-direction: column;
+                height: fit-content;
+            }
+
+            .servicesection {
+                height: fit-content;
+            }
+
+            #service>p {
+                margin-left: 15px;
+            }
+
+            .fa-microphone,
+            .fa-microphone-lines,
+            .fa-headphones {
+                padding: 2% 4% 2% 4%;
+                font-size: 8rem;
+                margin-top: 20px;
+                margin-left: 100px;
+                border-radius: 100%;
+                color: black;
+                border: 3px solid black;
+            }
+
+            .servicesection>h3 {
+                font-size: 1rem;
+                margin-top: 20px;
+                color: black;
+            }
+
+            .servicesection>p {
+                min-width: 40px;
+                line-height: 1.5;
+            }
+
+        }
+
+        /* about section */
+
+        #about {
+            height: 80vh;
+        }
+
+        .container3 {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            width: 97%;
+            padding: 20px;
+            margin: 20px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .aboutsection {
+            width: 100%;
+            height: 400px;
+            overflow: hidden;
+        }
+
+        .aboutsection>h1 {
+            text-align: center;
+            font-size: 2rem;
+            padding: 2% 1%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .aboutsection>p {
+            line-height: 1.8;
+            padding: 2% 1%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+        }
+
+        .aboutsection>button {
+            font-weight: 900;
+            border: 0;
+            border-radius: 10px;
+            margin-left: 10px;
+            margin-top: 20px;
+            padding: 2% 6% 2% 6%;
+        }
+
+        .aboutsection>button:hover {
+            background-color: black;
+            color: white;
+        }
+
+        .aboutsection>img {
+            width: 100%;
+            background-size: cover;
+            height: 100%;
+            border-radius: 30px;
+        }
+
+        @media screen and (max-width:650px) {
+            #about {
+                height: fit-content;
+            }
+
+            .container3 {
+                flex-direction: column;
+                height: fit-content;
+            }
+        }
+
+
+        /* our mic section */
+        #our-mic {
+            height: 170vh;
+
+        }
+
+        .container4 {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            width: 97%;
+            padding: 20px;
+            margin: 20px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+
+        .ourmic {
+            width: 100%;
+            height: 400px;
+            border-radius: 100%;
+            overflow: hidden;
+        }
+
+        img {
+            overflow: hidden;
+            transition: 15s ease-out;
+        }
+
+        img:hover {
+            transform: scale(2.5);
+        }
+
+        .ourmic:nth-child(1)>img {
+            width: 100%;
+            height: fit-content;
+        }
+
+        .ourmic:nth-child(2)>img {
+            width: 100%;
+            height: fit-content;
+        }
+
+        .ourmic:nth-child(3)>img {
+            width: 100%;
+            height: fit-content;
+        }
+
+        #our-mic>h1 {
+            padding: 2% 1%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            font-size: 2rem;
+        }
+
+        #our-mic>p {
+            padding: 2% 1%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: rgb(124, 110, 110);
+            text-align: center;
+        }
+
+        @media screen and (max-width:650px) {
+            #our-mic {
+                height: fit-content;
+            }
+
+            .container4 {
+                flex-direction: column;
+                height: fit-content;
+            }
+
+            .ourmic {
+                height: fit-content;
+            }
+        }
+
+
+        /* contact section */
+        #contact {
+            height: 100vh;
+        }
+
+        .container5 {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            width: 97%;
+            padding: 20px;
+            margin: 20px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .contactme {
+            width: 100%;
+            height: 350px;
+            padding: 2%;
+        }
+
+        input {
+            padding: 2% 1%;
+            height: 20px;
+            width: 100%;
+            outline: 2px solid black;
+            border-radius: 2px;
+        }
+
+        .emailandphone {
+            padding: 1%;
+            width: 100%;
+            display: flex;
+            gap: 40px;
+
+        }
+
+        textarea {
+            padding: 1.4%;
+            border-radius: 5px;
+            outline: 0;
+        }
+        #contact > h1{
+            padding: 2%;
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 2rem;
+        }
+        #contact > p{
+            padding: 2% 1%;
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.3;
+        }
+        form > button{
+            padding: 1% 7%;
+            border: 1px solid black;
+            outline: o;
+            border-radius: 10px;
+            text-align: center;
+            margin-left: 490px;
+            margin-top: 30px;
+        }
+        form > button:hover{
+            color: white;
+            background-color: black;
+        }
+
+
+        @media screen and (max-width:650px) {
+            #contact {
+                height: fit-content;
+            }
+
+            .container5 {
+                flex-direction: column;
+            }
+
+            input {
+                margin-top: 10px;
+            }
+
+            .contactme {
+                height: fit-content;
+            }
+
+            .emailandphone {
+                margin-top: 10px;
+                width: 100%;
+            }
+
+            textarea {
+                margin-top: 20px;
+                width: 350px;
+            }
+            form > button{
+                margin-left: 140px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section id="home">
+        <nav>
+            <header>Macro</header>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#service">Service</a>
+            <a href="#shop">Shop</a>
+            <a href="#contact"></a>
+            <a href=""><i class="fa-solid fa-user"></i></a>
+            <a href="#">Login</a>
+
+
+        </nav>
+        <div class="container">
+            <div class="heroitem">
+                <h1>The Air Mic</h1>
+                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                    alteration in some form, by injected humour, or randomised words which don't look even slightly
+                    believable. If you</p>
+                <button>Book Now</button>
+            </div>
+            <div class="heroitem">
+                <img src="./right_side.png" alt="">
+            </div>
+        </div>
+    </section>
+    <section id="service">
+        <h1>Our Services</h1>
+        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+            alteration in some form, by injected humour, or randomised words which don't look even slightly
+            believable. If you</p>
+        <div class="container2">
+            <div class="servicesection"><i class="fa-solid fa-microphone-lines"></i>
+                <h3>Mic line</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis odit sequi sint aperiam?</p>
+
+            </div>
+            <div class="servicesection"><i class="fa-solid fa-headphones"></i>
+                <h3>Head Mic</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis odit sequi sint aperiam?</p>
+
+            </div>
+            <div class="servicesection"><i class="fa-solid fa-microphone"></i>
+                <h3>Mic Stand</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis odit sequi sint aperiam?</p>
+            </div>
+
+        </div>
+
+    </section>
+    <section id="about">
+        <div class="container3">
+            <div class="aboutsection">
+                <h1>About Us</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores numquam dolorem ipsa alias
+                    praesentium temporibus maxime quae nihil rem pariatur. Sit, beatae eum eveniet voluptatum distinctio
+                    ullam modi vero alias dolorum eos architecto repellat voluptatem impedit, porro quaerat quasi
+                    eligendi!</p>
+                <button>Read more</button>
+            </div>
+            <div class="aboutsection">
+                <img src="./about_img.jpg" alt="">
+            </div>
+        </div>
+    </section>
+    <section id="our-mic">
+        <h1>Our Mic</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus, voluptates! Numquam deleniti quos
+            recusandae necessitatibus?</p>
+        <div class="container4">
+            <div class="ourmic">
+                <img src="./mics_img1.jpg" alt="">
+            </div>
+            <div class="ourmic">
+                <img src="./mics_img2.jpg" alt="">
+            </div>
+            <div class="ourmic">
+                <img src="./mics_img3.jpg" alt="">
+            </div>
+        </div>
+        <div class="container4">
+            <div class="ourmic">
+                <img src="./mics_img4.jpg" alt="">
+            </div>
+            <div class="ourmic">
+                <img src="./mics_img5.jpg" alt="">
+            </div>
+            <div class="ourmic">
+                <img src="./mics_img6.jpg" alt="">
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <h1>Request a call back.</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est velit ad vero, aperiam enim expedita debitis
+            consequatur perspiciatis ut consectetur?</p>
+        <div class="container5">
+            <div class="contactme">
+                <form action="">
+                    <input type="text" placeholder="Your Name">
+                    <div class="emailandphone">
+                        <input type="text" placeholder="Your Name">
+                        <input type="text" placeholder="Your Name">
+                    </div>
+                    <textarea name="" id="" cols="160" rows="4" placeholder="Send Message"></textarea>
+                    <button>Send</button>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
